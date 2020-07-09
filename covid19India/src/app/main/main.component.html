@@ -1,0 +1,8 @@
+<div class="main-table">
+    <app-main-header></app-main-header>    
+    <ng-container *ngIf="content" >
+        <div  *ngFor="let state of content.states">
+            <app-main-content [total]="state.total"></app-main-content>
+        </div>        
+    </ng-container>
+</div>

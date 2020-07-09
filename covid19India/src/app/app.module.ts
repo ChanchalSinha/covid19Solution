@@ -7,15 +7,19 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { MenuItemComponent } from './menu-item/menu-item.component';
+import { MainComponent } from './main/main.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
+import { MainContentComponent } from './main-content/main-content.component';
+// import { MenuBarComponent } from './menu-bar/menu-bar.component';
+// import { MenuItemComponent } from './menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    MenuBarComponent,
-    MenuItemComponent
+    MainComponent,
+    MainHeaderComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,

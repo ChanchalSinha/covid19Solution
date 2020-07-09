@@ -1,0 +1,19 @@
+.main-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-header__item {
+    height: 2rem;
+    width: 5rem;
+    margin: .1rem;
+    display: block;
+    background-color: #b9b3b3;
+    border-radius: .2rem;
+    text-align: center;
+    padding-top: .8rem;
+}
+
+.main-header__state {
+    width: 10rem;
+}
