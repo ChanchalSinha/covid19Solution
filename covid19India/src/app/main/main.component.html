@@ -1,8 +1,12 @@
 <div class="main-table">
-    <app-main-header></app-main-header>    
+    <app-main-header (parentFun)="sortFields($event)"></app-main-header>
     <ng-container *ngIf="content" >
-        <div  *ngFor="let state of content.states">
-            <app-main-content [total]="state.total"></app-main-content>
-        </div>        
+        <div  *ngFor="let state of content.states">            
+            <app-main-content *ngIf="state.total.state !== 'India'" [total]="state.total"></app-main-content>
+        </div>                     
     </ng-container>
+    <ng-container *ngIf="totalCount[0]" >       
+        <app-main-content [total]="totalCount[0].total"></app-main-content>
+    </ng-container>
+    
 </div>

@@ -26,7 +26,6 @@ export class ContentService {
     this.map.set('KA', 'Karnataka');
     this.map.set('KL', 'Kerala');
     this.map.set('LA', 'Ladakh');
-    this.map.set('LD', 'Andeman');
     this.map.set('MH', 'Maharashtra');
     this.map.set('ML', 'Meghalaya');
     this.map.set('MN', 'Manipur');
@@ -40,9 +39,8 @@ export class ContentService {
     this.map.set('SK', 'Sikkim');
     this.map.set('TG', 'Telangana');
     this.map.set('TN', 'Tamil Nadu');
-    this.map.set('TY', 'Andeman');
     this.map.set('TR', 'Tripura');
-    this.map.set('TT', 'Andeman');
+    this.map.set('TT', 'India');
     this.map.set('UN', 'Unassigned');
     this.map.set('UP', 'Uttar Pradesh');
     this.map.set('UT', 'Uttarakhand');
@@ -50,7 +48,7 @@ export class ContentService {
    }
 
    public getContents(): Observable<any> {
-     return this.http.get('https://api.covid19india.org/v4/min/data.min.json')
+     return this.http.get('https://api.covid19India.org/v4/min/data.min.json')
    }
 
    public getCountryName(countryCode: string): String {

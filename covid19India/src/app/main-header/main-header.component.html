@@ -1,9 +1,11 @@
 <div class="main-header">
-    <div class="main-header__item main-header__state">State/UT</div>
-    <div class="main-header__item" title="Confirmed">C</div>
-    <div class="main-header__item" title="Active">A</div>
-    <div class="main-header__item" title="Recovered">R</div>
-    <div class="main-header__item" title="Deceased">D</div>
-    <div class="main-header__item" title="Tested">T</div>
+    <div class="main-header__item main-header__state" (click)="sortFields('state')">State/UT</div>
+        <div class="main-header__item" title="Confirmed" (click)="sortFields('confirmed')">C</div>
+        <div class="main-header__item" title="Active" (click)="sortFields('active')">A</div>
+        <div class="main-header__item" title="Recovered" (click)="sortFields('recovered')">R</div>
+        <div class="main-header__item" title="Deceased" (click)="sortFields('deceased')">D</div>
+        <div class="main-header__item" title="Tested" (click)="sortFields('tested')">T</div>
 </div>
+
+
 

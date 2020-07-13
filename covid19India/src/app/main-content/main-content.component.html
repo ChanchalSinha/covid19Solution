@@ -1,4 +1,4 @@
-<div class="main-content">
+<div *ngIf="total" class="main-content">
     <div class="main-content__item main-content__state">{{total.state}}</div>
     <div class="main-content__item">{{total.confirmed}}</div>
     <div class="main-content__item">{{total.active}}</div>
