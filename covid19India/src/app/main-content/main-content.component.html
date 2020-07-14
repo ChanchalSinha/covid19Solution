@@ -1,4 +1,4 @@
-<div *ngIf="total" class="main-content">
+<div *ngIf="total" class="main-content" (click)="total.state !== 'India' && openDistrictDetails()">
     <div class="main-content__item main-content__state">{{total.state}}</div>
     <div class="main-content__item">{{total.confirmed}}</div>
     <div class="main-content__item">{{total.active}}</div>
@@ -6,4 +6,19 @@
     <div class="main-content__item">{{total.deceased}}</div>
     <div class="main-content__item">{{total.tested}}</div>
 </div>
+<ng-container *ngIf="content" >
+    <div  *ngIf="content.districts" class="sub-content">
+    <div class="sub-header">
+        <div class="sub-header__item sub-header__state" (click)="sortFields('district')">District</div>
+            <div class="sub-header__item" title="Confirmed" (click)="sortFields('confirmed')">C</div>
+            <div class="sub-header__item" title="Active" (click)="sortFields('active')">A</div>
+            <div class="sub-header__item" title="Recovered" (click)="sortFields('recovered')">R</div>
+            <div class="sub-header__item" title="Deceased" (click)="sortFields('deceased')">D</div>
+            <div class="sub-header__item" title="Tested" (click)="sortFields('tested')">T</div>
+    </div>
+    <div  *ngFor="let district of content.districts">         
+        <app-state-content [district]="district"></app-state-content>
+    </div> 
+</div>                    
+</ng-container>
 

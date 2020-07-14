@@ -30,10 +30,11 @@ export class MainComponent implements OnInit {
             active: result[key].total.confirmed - ((result[key].total.recovered || 0) + (result[key].total.deceased || 0)),
             recovered: result[key].total.recovered ? result[key].total.recovered : 0,
             deceased: result[key].total.deceased ? result[key].total.deceased : 0,
-            tested: result[key].total.tested ? result[key].total.tested : 0,
+            tested: result[key].total.tested ? result[key].total.tested : 0
           };
           let state = {
-            total: totalCount
+            total: totalCount,
+            districts: result[key].districts
           };
           states.push(state);
         }   

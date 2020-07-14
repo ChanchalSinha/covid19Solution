@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { StateContentComponent } from './state-content/state-content.component';
 // import { MenuBarComponent } from './menu-bar/menu-bar.component';
 // import { MenuItemComponent } from './menu-item/menu-item.component';
 
@@ -19,7 +20,8 @@ import { MainContentComponent } from './main-content/main-content.component';
     SidebarComponent,
     MainComponent,
     MainHeaderComponent,
-    MainContentComponent
+    MainContentComponent,
+    StateContentComponent
   ],
   imports: [
     BrowserModule,

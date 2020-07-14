@@ -2,7 +2,7 @@
     <app-main-header (parentFun)="sortFields($event)"></app-main-header>
     <ng-container *ngIf="content" >
         <div  *ngFor="let state of content.states">            
-            <app-main-content *ngIf="state.total.state !== 'India'" [total]="state.total"></app-main-content>
+            <app-main-content *ngIf="state.total.state !== 'India'" [total]="state.total" [districts]="state.districts"></app-main-content>
         </div>                     
     </ng-container>
     <ng-container *ngIf="totalCount[0]" >       

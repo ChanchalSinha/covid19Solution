@@ -18,3 +18,27 @@
     height: auto;
     width: 10rem;
 }
+
+.sub-content {
+    margin: 1rem;
+}
+
+.sub-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.sub-header__item {
+    height: 2rem;
+    width: 5rem;
+    margin: .1rem;
+    display: block;
+    background-color: #b9b3b3;
+    border-radius: .2rem;
+    text-align: center;
+    padding-top: .8rem;
+}
+
+.sub-header__state {
+    width: 9rem;
+}
