@@ -16,11 +16,17 @@ export class MainComponent implements OnInit {
   recoveredAcsending: boolean = true;
   deceasedAcsending: boolean = true;
   testedAscending: boolean = true;
-  totalCount: Object = {};
+  totalCount: Object = [];
+  name: string = 'header1';
   constructor(private contentsService: ContentService) { }
 
+  onButtonClick(name) {
+    console.log('name is ',name);
+    
+  }
+
   ngOnInit(): void {
-    this.contentsService.getContents().subscribe((result)=>{     
+    this.contentsService.getContents().subscribe((result)=>{      
       let states = [];
       for ( let key in result) {
         if(result[key].total) {
@@ -46,7 +52,7 @@ export class MainComponent implements OnInit {
   }
 
   sortFields(fieldName: string): void {    
-    this.content.states.sort(this.customSort(fieldName));
+    this.content && this.content.states.sort(this.customSort(fieldName));
   }
 
   customSort(property: string) { 
@@ -54,15 +60,15 @@ export class MainComponent implements OnInit {
     let field = property + "Ascending";
     this[field] = !this[field]
     
-    if(!this[field]){
+    if (!this[field]) {
         sort_order = -1;
     }
     return function (a:any, b:any) {
-        if(a.total[property] < b.total[property]){
+        if (a.total[property] < b.total[property]) {
                 return -1 * sort_order;
-        }else if(a.total[property] > b.total[property]){
+        } else if (a.total[property] > b.total[property]) {
                 return 1 * sort_order;
-        }else{
+        } else {
                 return 0 * sort_order;
         }
     }

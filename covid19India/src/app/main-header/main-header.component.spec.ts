@@ -22,4 +22,10 @@ describe('MainHeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call sortFields function', () => {
+    spyOn(component.parentFun, 'emit').and.callFake;
+    component.sortFields('state');
+    expect(component.parentFun.emit).toHaveBeenCalled();
+  });
 });

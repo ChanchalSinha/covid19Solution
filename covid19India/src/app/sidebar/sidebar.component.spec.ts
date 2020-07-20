@@ -22,4 +22,15 @@ describe('SidebarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call openMenuBar function', () => {
+    component.openMenuBar();
+    expect(component.showMenuBar).toBeTruthy();
+
+  });
+
+  it('should call closeMenuBar function', () => {
+    component.closeMenuBar();
+    expect(component.showMenuBar).toBeFalsy();
+  });
 });

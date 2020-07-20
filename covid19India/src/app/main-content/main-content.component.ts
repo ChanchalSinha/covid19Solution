@@ -10,7 +10,7 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class MainContentComponent implements OnInit {
   @Input() total: Total;
-  @Input() districts: Total;
+  @Input() districts: any;
   districtAscending: boolean = true;
   confirmedAscending: boolean = true;
   activeAscending: boolean = true;
@@ -46,14 +46,14 @@ export class MainContentComponent implements OnInit {
               districts.push(dst);
             }   
           }
-          this.content = {total: this.total, districts: districts}; 
+          this.content = {total: this.total, districts: districts};
     } else {
       this.content = new State();
     }          
   }
 
   sortFields(fieldName: string): void {
-    this.content.districts.sort(this.customSort(fieldName));
+    this.content && this.content.districts.sort(this.customSort(fieldName));
   }
 
   customSort(property: string) { 

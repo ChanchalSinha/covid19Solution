@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators'
+import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root'
@@ -48,7 +50,13 @@ export class ContentService {
    }
 
    public getContents(): Observable<any> {
-     return this.http.get('https://api.covid19India.org/v4/min/data.min.json')
+     return this.http.get('https://api.covid19India.org/v4/min/data.min.json').pipe(
+       catchError((err)=>{
+         console.log('error caught in service');
+         console.log(err);
+         return throwError(err);        
+       })
+     )
    }
 
    public getCountryName(countryCode: string): String {
