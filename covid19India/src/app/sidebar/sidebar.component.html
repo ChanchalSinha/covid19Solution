@@ -2,7 +2,7 @@
     <div class="navbar">
         <div class="navbar__top">COVID19 INDIA</div>
         <div class="navbar__middle" (mouseenter)="openMenuBar()">
-            <a><mat-icon class="navbar__item" svgIcon="home"></mat-icon></a>
+            <a href="/home"><mat-icon class="navbar__item" svgIcon="home"></mat-icon></a>
             <a><mat-icon class="navbar__item" svgIcon="demographic"></mat-icon></a>
             <a><mat-icon class="navbar__item" svgIcon="essential"></mat-icon></a>
             <a><mat-icon class="navbar__item" svgIcon="about"></mat-icon></a>
@@ -14,7 +14,7 @@
     <ng-container *ngIf="showMenuBar">
         <div class="navbar" (mouseleave)="closeMenuBar()">
             <div class="navbar__middle--open">
-                <a class="navbar__item--open">Home</a>
+                <a class="navbar__item--open" href="/home">Home</a>
                 <a class="navbar__item--open">Demographics</a>
                 <a class="navbar__item--open">Essentials</a>
                 <a class="navbar__item--open">About</a>

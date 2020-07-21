@@ -50,13 +50,7 @@ export class ContentService {
    }
 
    public getContents(): Observable<any> {
-     return this.http.get('https://api.covid19India.org/v4/min/data.min.json').pipe(
-       catchError((err)=>{
-         console.log('error caught in service');
-         console.log(err);
-         return throwError(err);        
-       })
-     )
+     return this.http.get('https://api.covid19India.org/v4/min/data.min.json');
    }
 
    public getCountryName(countryCode: string): String {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatIconRegistry, MatIcon } from '@angular/material/icon';
+import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
