@@ -2,9 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainComponent } from './main.component';
 import { ContentService } from '../services/content.service';
-import { ContentServiceStub } from '../testing/content.service.stub'
 import { HttpClientModule } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -31,6 +29,5 @@ describe('MainComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    //expect(component.content.states.length).toBe(30);
   });
 });

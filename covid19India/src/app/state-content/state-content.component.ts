@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Total } from '../models/total';
 
 @Component({
@@ -6,12 +6,8 @@ import { Total } from '../models/total';
   templateUrl: './state-content.component.html',
   styleUrls: ['./state-content.component.scss']
 })
-export class StateContentComponent implements OnInit {
+export class StateContentComponent {
+  
   @Input() district: Total;
-  constructor() { }
-
-  ngOnInit(): void {
-    
-  }
 
 }

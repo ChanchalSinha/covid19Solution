@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../services/content.service'
 import { Content } from '../models/content';
-import { Total } from '../models/total';
 
 @Component({
   selector: 'app-main',
@@ -17,13 +16,7 @@ export class MainComponent implements OnInit {
   deceasedAcsending: boolean = true;
   testedAscending: boolean = true;
   totalCount: Object = [];
-  name: string = 'header1';
   constructor(private contentsService: ContentService) { }
-
-  onButtonClick(name) {
-    console.log('name is ',name);
-    
-  }
 
   ngOnInit(): void {
     this.contentsService.getContents().subscribe((result)=>{      

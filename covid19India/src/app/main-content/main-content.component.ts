@@ -8,7 +8,7 @@ import { ThrowStmt } from '@angular/compiler';
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent implements OnInit {
+export class MainContentComponent {
   @Input() total: Total;
   @Input() districts: any;
   districtAscending: boolean = true;
@@ -19,11 +19,6 @@ export class MainContentComponent implements OnInit {
   testedAscending: boolean = true;
   content: State;
   openAccordion: boolean = false;
-  constructor() { }
-
-  ngOnInit(): void {
-    
-  }
 
   openDistrictDetails(): void {
     this.openAccordion = !this.openAccordion;
@@ -74,7 +69,4 @@ export class MainContentComponent implements OnInit {
         }
     }
   }
-
-
-
 }
